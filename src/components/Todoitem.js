@@ -10,9 +10,14 @@ export class Todoitem extends Component {
         else Class += 'todoitem_unchecked'
         return (
             <div className={Class}>
-                <p> <input type="checkbox" className="checkbox" onChange={this.props.markComplete.bind(this, id)} />{""}
+                <p> <input 
+                    type="checkbox" 
+                    className="checkbox" 
+                    onChange={() => this.props.markComplete(id)} 
+                />
+                {""}
                     {title}
-                    <button onClick={this.props.delTodo.bind(this, id)} className='btnStyle'><i class="fas fa-times"></i></button>
+                    <button onClick={() => this.props.delTodo(id)} className='btnStyle'><i class="fas fa-times"></i></button>
                 </p>
             </div>
         )
