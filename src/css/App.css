@@ -14,10 +14,17 @@ a{
 .btn{
     display: inline-block;
     border: none;
+    flex:1;
     background-color: #fff;
     padding: 7px 20px;
     cursor: pointer;
 }
 .btn:hover{
     background-color: #666;
+}
+h3{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    margin-left: 5px;
 }

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-
+import '../css/Input.css'
 export class AddTodo extends Component {
     state = {
         title: ""
@@ -16,16 +16,16 @@ export class AddTodo extends Component {
     onChange =(e)=>this.setState({title:e.target.value});
     render() {
         return (
-            <form onSubmit={this.onSubmit} style={{display:"flex"}}>
+            <form onSubmit={this.onSubmit}>
                 <input type="text"
+                    className="input_text"
                     name="title"
-                    style={{flex: "10",padding: "5px"}}
                     placeholder="Додавте подію..."
                     value = {this.state.title}
                     onChange={this.onChange}
                 >
                 </input>
-                <input type="submit" value = "Submit" className="btn" style={{flex: "1"}}></input>
+                <button type="submit" className="btn">Submit</button>
             </form>
         )
     }
